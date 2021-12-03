@@ -1,0 +1,5 @@
+bin/*
+config*.toml
+static/js
+static/css
+ui/js/node_modules

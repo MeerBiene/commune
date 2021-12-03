@@ -1,0 +1,66 @@
+{{define "index"}}
+<html>
+  <head>
+    <title>Commune</title>
+      <meta name="description" content="Turn on, tune in, drop out.">
+  <link rel="stylesheet" href="{{ InsertCSS "home" }}" as="style">
+    {{template "common-head" .}}
+
+  </head>
+  <body>
+    <div class="root">
+
+        <div class="feature">
+
+            <div class="feature-content ">
+                <div class="mx-w gr-center flex flex-column pa3">
+                    <div class="logo">
+                        {{template "logo" .}}
+                    </div>
+                </div>
+                <div class="auth pa3 flex flex-column">
+                    <div class="authbox pa3 flex flex-column w-100">
+                        <form method="POST" action="/login">
+
+                        <div class="">
+                            <input type="text" name="username"
+                            autofocus="autofocus"
+                            autocomplete="off"
+                            placeholder="username"/>
+                        </div>
+                        <div class="pt3">
+                            <input type="password" name="password"
+                            placeholder="password"/>
+                        </div>
+                        <div class="pt3 flex">
+                            <div class="flex-one">
+                                <button class="" type="submit">log in</button>
+                            </div>
+                            <div class="gr-center">
+                                <span class="link">sign up</span>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="pt3 flex gr-center">
+                        <span class="link smaller">
+                            Forgot password?
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+<script nonce={{.Nonce}}>
+    let nonce={{.Nonce}}
+    let JSasset={{ InsertJS "app" }}
+</script>
+  <script defer nonce={{.Nonce}} type="module" src="{{ InsertJS "home" }}"></script>
+
+    </div>
+  </body>
+</html>
+{{end}}

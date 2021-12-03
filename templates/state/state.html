@@ -1,0 +1,14 @@
+{{define "state"}}
+  <script nonce={{.Nonce}}>
+    let tenorKey = {{.TenorKey}}
+    let homeServer = {{.HomeServerURL}}
+    let shortlinkDomain = {{.ShortlinkDomain}}
+    let federationDomain = {{.FederationDomain}}
+    let authenticated = false;
+    let identity;
+    {{if .LoggedInUser}}
+        authenticated = true
+        identity = {{.LoggedInUser}}
+    {{end}}
+  </script>
+{{end}}

@@ -1,0 +1,43 @@
+{{define "index-user"}}
+<html>
+  <head>
+    <title>Commune</title>
+      <meta name="description" content="Turn on, tune in, drop out.">
+    {{template "common-head" .}}
+  <link rel="stylesheet" href="{{ InsertCSS "index" }}" as="style">
+  <link rel="stylesheet" href="{{ InsertCSS "highlightjs" }}" as="style">
+
+
+  </head>
+  <body>
+<script nonce={{.Nonce}}>
+    let mode = localStorage.getItem('light-mode')
+    if(mode && mode == "true") {
+        document.documentElement.classList.add('light')
+    }
+</script>
+    <div class="root app">
+
+        <div class="gr-center fl-co">
+            <div class="spinner gr-center"></div>
+            <div class="loading-message pa3 center">
+                Calibrating...
+            </div>
+        </div>
+
+
+      {{template "state" .}}
+
+
+
+  <script defer nonce={{.Nonce}} type="module"
+      src="/static/vendor/olm-3.2.1.js"></script>
+  <script defer nonce={{.Nonce}} type="module"
+      src="/static/vendor/browser-matrix-12.5.0.min.js"></script>
+  <script defer nonce={{.Nonce}} type="module" src="{{ InsertJS "default" }}"></script>
+  <script defer nonce={{.Nonce}} type="module" src="{{ InsertJS "app" }}"></script>
+
+    </div>
+  </body>
+</html>
+{{end}}
