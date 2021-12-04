@@ -1,7 +1,7 @@
 ### Commune
 Commune is a communications suite built on top of [matrix](https://matrix.org). Commune aims to bring together chat, discussions, email and other interactive apps into a single matrix client. Commune is under active development and not yet ready for production.
 
-Dev instance: [https://dev.commune.chat](dev.commune.chat)
+Dev instance: [dev.commune.chat](https://dev.commune.chat)
 
 #### Roadmap
 
