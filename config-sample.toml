@@ -1,0 +1,66 @@
+name = "commune"
+mode = "development"
+youtube_key = ""
+
+[client]
+domain = "localhost.com"
+shortlink_domain = "lch.com"
+port = 8989
+cookie_name = "commune"
+secure_cookie = "something_random"
+
+[matrix]
+server = "localhost.com"
+public_server = "localhost.com"
+port = 8008
+username = "commune"
+password = "CaR6hxVWKBzYn"
+
+[db]
+client = "postgres://postgres:postgres@localhost:5432/commune?sslmode=disable" # postgres connection string
+matrix = "postgres://postgres:postgres@localhost:5432/synapse?sslmode=disable" # dendrite db connection string
+
+[redis]
+address = "localhost:6379"
+password = "redispass"
+db = 1
+
+[spaces]
+prefix = "org.matrix.msc1772.space"
+
+[auth]
+verify_email = false
+disable_registration = false
+disable_federated_login = false
+disable_profile_creation = false
+shared_secret = "" #must match with shared_secret in dendrite.yaml
+
+[privacy]
+disable_public = false
+
+[email]
+account = ""
+server = ""
+[email.templates]
+verify_email= 24440113
+password_reset = 24453230
+
+[tenor]
+key = ""
+
+[github]
+secret = ""
+
+[oauth_2]
+[oauth_2.github]
+client_id = ""
+client_secret = ""
+[oauth_2.google]
+client_id = ""
+client_secret = ""
+[oauth_2.discord]
+client_id = ""
+client_secret = ""
+[oauth_2.reddit]
+client_id = ""
+client_secret = ""
